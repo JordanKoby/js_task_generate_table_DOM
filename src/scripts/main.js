@@ -354,9 +354,6 @@ const people = [
   },
 ];
 
-// eslint-disable-next-line no-console
-console.log(people); // you can remove it
-
 const table = document.querySelector('.dashboard');
 
 people.forEach((person) => {
@@ -369,7 +366,7 @@ people.forEach((person) => {
 
   const sexCell = document.createElement('td');
 
-  sexCell.textContent = person.sex;
+  sexCell.textContent = person.sex === 'm' ? 'Male' : 'Female';
   row.appendChild(sexCell);
 
   const bornCell = document.createElement('td');
